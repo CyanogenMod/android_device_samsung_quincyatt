@@ -54,6 +54,10 @@ on emmc-fs
     mount ext4 /dev/block/mmcblk0p26 /cache nosuid nodev barrier=1
     exec sfsck /dev/block/mmcblk0p21 ext4
     mount ext4 /dev/block/mmcblk0p21 /efs nosuid nodev barrier=1
+    wait /dev/block/mmcblk0p25
+    exec sfsck /dev/block/mmcblk0p25 ext4
+    mount ext4 /dev/block/mmcblk0p25 /data nosuid nodev barrier=1 noauto_da_alloc
+
     chown radio system /efs
     chmod 0771 /efs
     mkdir /efs/imei 0775
@@ -78,10 +82,6 @@ on emmc-fs
 
     # check encryption status, checking UMS & data should be excuted after this command
     exec check_encryption_status /dev/block/mmcblk0p25
-
-    wait /dev/block/mmcblk0p25
-    exec sfsck /dev/block/mmcblk0p25 ext4
-    mount ext4 /dev/block/mmcblk0p25 /data nosuid nodev barrier=1 noauto_da_alloc
 
     # for parameter
     chown system radio /dev/block/mmcblk0p12
