@@ -25,14 +25,6 @@ $(call inherit-product-if-exists, vendor/samsung/quincyatt/quincyatt-vendor.mk)
 ## overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/quincyatt/overlay
 
-# GPS
-PRODUCT_PACKAGES += \
-    gps.quincyatt
-
-# Lights
-PRODUCT_PACKAGES += \
-    lights.quincyatt
-
 # Kernel and modules
 ifeq ($(TARGET_PREBUILT_KERNEL),)
     LOCAL_KERNEL := device/samsung/quincyatt/prebuilt/kernel

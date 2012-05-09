@@ -43,8 +43,6 @@ BOARD_KERNEL_BASE           := 0x48000000
 BOARD_FORCE_RAMDISK_ADDRESS := 0x49400000
 BOARD_KERNEL_PAGESIZE       := 2048
 
-BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := quincyatt
-
 # Only needed if TARGET_USES_OVERLAY is true and if using CM's
 # hardware/qcom/display (CAF's latest no longer has this #ifdef)
 #COMMON_GLOBAL_CFLAGS += -DQCOM_ROTATOR_KERNEL_FORMATS
