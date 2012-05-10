@@ -107,3 +107,8 @@ persist.radio.add_power_save=1
 # notify vold we have internal and external sd
 ro.additionalmounts=/mnt/emmc
 ro.vold.switchablepair=/mnt/sdcard,/mnt/emmc
+
+# qcom display options
+debug.enabletr=true
+com.qc.hardware=true
+
