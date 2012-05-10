@@ -26,16 +26,6 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 #
-on early-init
-    mkdir /mnt/sdcard 0000 system system
-    # for backwards compatibility
-    symlink /mnt/sdcard /sdcard
-
-    mkdir /mnt/emmc 0000 system system
-    symlink /mnt/emmc /emmc
-
-    export EXTERNAL_STORAGE /mnt/emmc
-
 on boot
     chown system system /dev/accelerometer
     chown system system /dev/akm8975

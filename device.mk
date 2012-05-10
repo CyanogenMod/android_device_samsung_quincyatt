@@ -64,7 +64,8 @@ PRODUCT_COPY_FILES += \
     device/samsung/quincyatt/ramdisk/init.target.rc:root/init.target.rc \
     device/samsung/quincyatt/ramdisk/initlogo.rle:root/initlogo.rle \
     device/samsung/quincyatt/ramdisk/lpm.rc:root/lpm.rc \
-    device/samsung/quincyatt/ramdisk/ueventd.rc:root/ueventd.rc
+    device/samsung/quincyatt/ramdisk/ueventd.rc:root/ueventd.rc \
+	device/samsung/quincyatt/ramdisk/init.emmc.rc:root/init.emmc.rc
 
 # BT firmware
 PRODUCT_COPY_FILES += \
