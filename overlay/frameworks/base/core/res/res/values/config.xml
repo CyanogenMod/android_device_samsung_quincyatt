@@ -23,16 +23,7 @@
 
     <!-- Flag indicating whether we should enable automatic brightness for
          the button and keyboard backlights. -->
-    <bool name="config_autoBrightnessButtonKeyboard">false</bool>
-
-    <!-- Default color for notification LED is green. -->
-    <color name="config_defaultNotificationColor">#ff00ff00</color>
-
-    <!-- Default LED on time for notification LED in milliseconds. -->
-    <integer name="config_defaultNotificationLedOn">1000</integer>
-
-    <!-- Default LED off time for notification LED in milliseconds. -->
-    <integer name="config_defaultNotificationLedOff">9000</integer>
+    <bool name="config_autoBrightnessButtonKeyboard">true</bool>
 
     <!-- Our amoled doesn't animate well. -->
     <bool name="config_animateScreenLights">false</bool>
@@ -71,6 +62,7 @@
     <integer-array name="config_autoBrightnessLevels">
         <item>30</item>
         <item>150</item>
+        <item>600</item>
         <item>1500</item>
         <item>15000</item>
     </integer-array>
@@ -80,10 +72,11 @@
          than the size of the config_autoBrightnessLevels array.
     -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>40</item>
-        <item>80</item>
-        <item>130</item>
-        <item>210</item>
+        <item>34</item>
+        <item>48</item>
+        <item>84</item>
+        <item>103</item>
+        <item>191</item>
         <item>255</item>
     </integer-array>
 
@@ -94,11 +87,6 @@
     <integer-array name="config_autoBrightnessButtonBacklightValues">
         <item>255</item>
         <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
         <item>0</item>
         <item>0</item>
         <item>0</item>
@@ -112,11 +100,6 @@
     <integer-array name="config_autoBrightnessKeyboardBacklightValues">
         <item>255</item>
         <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
         <item>0</item>
         <item>0</item>
         <item>0</item>
@@ -194,7 +177,7 @@
     <bool translatable="false" name="config_wifi_background_scan_support">true</bool>
 
     <!-- Enables or disables fading edges when marquee is enabled in TextView. -->
-    <bool name="config_ui_enableFadingMarquee">false</bool>
+    <bool name="config_ui_enableFadingMarquee">true</bool>
 
     <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveNotificationLed">false</bool>
