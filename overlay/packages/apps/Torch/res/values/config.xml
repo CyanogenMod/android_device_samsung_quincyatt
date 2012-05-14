@@ -18,5 +18,8 @@
 
 <resources>
     <!-- If there is no sysfs-based control mechanism, enable this -->
-    <bool name="useCameraInterface">true</bool>
+    <bool name="useCameraInterface">false</bool>
+
+    <string name="flashDevice">/sys/devices/virtual/ledflash/sec_ledflash/torch</string>
+    <integer name="valueOn">1</integer>
 </resources>

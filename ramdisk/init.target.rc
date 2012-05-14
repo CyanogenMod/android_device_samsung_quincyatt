@@ -44,7 +44,7 @@ on boot
     chown system system /sys/class/sensors/barometer_sensor/eeprom_check
 
     #camera
-    chown system system /sys/class/ledflash/sec_ledflash/torch
+    chown system camera /sys/class/ledflash/sec_ledflash/torch
 
 # ko files for vibrator (block this cmd temporary. vibrato driver cause reset during boot)
     insmod /system/lib/modules/vibrator.ko
