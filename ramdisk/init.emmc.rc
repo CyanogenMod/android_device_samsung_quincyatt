@@ -77,6 +77,13 @@ on emmc-fs
     chmod 0660 /dev/tspdrv
     chown root shell /dev/tspdrv
 
+    chown system system /sys/power/cpufreq_max_limit
+    chown system system /sys/power/cpufreq_min_limit
+    chown system system /sys/power/cpufreq_table
+    chmod 664 /sys/power/cpufreq_max_limit
+    chmod 664 /sys/power/cpufreq_min_limit
+    chmod 664 /sys/power/cpufreq_table
+
 # Permissions for LCD
     chown radio system /sys/class/lcd/panel/lcd_type
     chown radio system /sys/class/lcd/panel/lcd_power
@@ -229,6 +236,10 @@ on emmc-fs
 #Essential node for usbservice
     mkdir /dev/bus/ 755 root root
     mkdir /dev/bus/usb 755 root root
+
+#Added for MTP permission
+    chmod 0660 /dev/usb_mtp_gadget
+    chown system system /dev/usb_mtp_gadget
 
     # create fota delta dir
     mkdir /data/fota_test 0775 system log
