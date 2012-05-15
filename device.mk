@@ -71,6 +71,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/quincyatt/firmware/bcm4330B1.hcd:system/etc/firmware/bcm4330B1.hcd
 
+# S-Pen IDC
+PRODUCT_COPY_FILES += \
+    device/samsung/quincyatt/idc/sec_e-pen.idc:system/usr/idc/sec_e-pen.idc
+
 # common msm8660
 $(call inherit-product, device/samsung/msm8660-common/msm8660.mk)
 
