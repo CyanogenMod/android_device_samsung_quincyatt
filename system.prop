@@ -70,7 +70,7 @@ ro.sf.lcd_density=320
 
 # Fields for custom RIL
 # MAX PROP NAME is 31 chars --|
-ro.telephony.ril_class=HercSkyQualcommUiccRIL
+ro.telephony.ril_class=SamsungQualcommUiccRIL
 telephony.lteOnGsmDevice=1
 
 # Property to allow IccCard to properly handle APPSTATE_SUBSCRIPTION_PERSO
@@ -84,6 +84,9 @@ persist.radio.adb_log_on=1
 
 # System proverty for sys info indication
 persist.radio.add_power_save=1
+
+# System proverty snapshot disable
+persist.radio.snapshot_disabled=1
 
 # notify vold we have internal and external sd
 ro.additionalmounts=/mnt/emmc
