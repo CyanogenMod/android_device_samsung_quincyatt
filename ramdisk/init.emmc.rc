@@ -244,6 +244,9 @@ on emmc-fs
     mkdir /cache/fota 0775 system cache
     chmod 0775 /cache/fota
 
+    # FIXME: camera issues with full randomization
+    write /proc/sys/kernel/randomize_va_space 1
+
 service ril-daemon /system/bin/rild
     class main
     socket rild stream 660 root radio
