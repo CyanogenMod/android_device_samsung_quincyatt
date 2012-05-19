@@ -95,4 +95,4 @@ ro.vold.switchablepair=/mnt/sdcard,/mnt/emmc
 # qcom display options
 debug.enabletr=true
 com.qc.hardware=true
-
+com.qc.hdmi_out=true
