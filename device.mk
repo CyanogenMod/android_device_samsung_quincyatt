@@ -25,6 +25,10 @@ $(call inherit-product-if-exists, vendor/samsung/quincyatt/quincyatt-vendor.mk)
 ## overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/quincyatt/overlay
 
+# Device uses high-density artwork where available
+PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
+
 # Kernel and modules
 ifeq ($(TARGET_PREBUILT_KERNEL),)
     LOCAL_KERNEL := device/samsung/quincyatt/prebuilt/kernel
