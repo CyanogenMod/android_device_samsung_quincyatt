@@ -79,3 +79,6 @@ BOARD_MTP_DEVICE := "/dev/usb_mtp_gadget"
 # Disable MVS audio, it causes robot voice in GTalk
 COMMON_GLOBAL_CFLAGS += -DNO_QCOM_MVS
 
+# Only use 2 bypass layers to avoid glitches locking the buffers
+TARGET_MAX_BYPASS_LAYERS := 2
+
