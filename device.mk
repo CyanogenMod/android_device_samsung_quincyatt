@@ -60,14 +60,12 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-    device/samsung/quincyatt/ramdisk/init.qcom.lpm_boot.sh:root/init.qcom.lpm_boot.sh \
     device/samsung/quincyatt/ramdisk/init.qcom.rc:root/init.qcom.rc \
     device/samsung/quincyatt/ramdisk/init.qcom.sh:root/init.qcom.sh \
     device/samsung/quincyatt/ramdisk/init.qcom.usb.rc:root/init.qcom.usb.rc \
     device/samsung/quincyatt/ramdisk/init.qcom.usb.sh:root/init.qcom.usb.sh \
     device/samsung/quincyatt/ramdisk/init.target.rc:root/init.target.rc \
     device/samsung/quincyatt/ramdisk/initlogo.rle:root/initlogo.rle \
-    device/samsung/quincyatt/ramdisk/lpm.rc:root/lpm.rc \
     device/samsung/quincyatt/ramdisk/ueventd.rc:root/ueventd.rc \
 	device/samsung/quincyatt/ramdisk/init.emmc.rc:root/init.emmc.rc
 
