@@ -138,14 +138,15 @@ service console /system/bin/sh
     class core
     console
 
-service playlpm /system/bin/playlpm
-   	user root
-
 service immvibed /system/bin/immvibed 
 	oneshot
 
-service lpmkey /system/bin/lpmkey
-   	user root
+service charger /charger
+    class charger
+    user root
+
+on charger
+    class_start charger
 
 # Used to disable USB when switching states
 on property:sys.usb.config=none
