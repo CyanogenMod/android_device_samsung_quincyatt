@@ -1,4 +1,4 @@
-# Copyright (C) 2009 The Android Open Source Project
+# Copyright (C) 2009 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -20,13 +20,8 @@
 # definition file).
 #
 
-# WARNING: This line must come *before* including the proprietary
-# variant, so that it gets overwritten by the parent (which goes
-# against the traditional rules of inheritance).
-USE_CAMERA_STUB := true
-
 # inherit from common msm8660
--include device/samsung/msm8660-common/BoardConfigCommon.mk
+-include device/samsung/quincy-common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
 -include vendor/samsung/quincyatt/BoardConfigVendor.mk
@@ -43,45 +38,10 @@ BOARD_KERNEL_BASE           := 0x48000000
 BOARD_FORCE_RAMDISK_ADDRESS := 0x49400000
 BOARD_KERNEL_PAGESIZE       := 2048
 
-# cat /proc/emmc
-#dev:        size     erasesize name
-#mmcblk0p22: 00fffc00 00000200 "recovery"
-#mmcblk0p8: 01000000 00000200 "boot"
-#mmcblk0p24: 5ffffc00 00000200 "system"
-#mmcblk0p26: 13fffe00 00000200 "cache"
-#mmcblk0p25: 9ffffe00 00000200 "userdata"
-
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x00A00000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x00A00000
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 834666496
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1073741824
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 2147483648
 BOARD_FLASH_BLOCK_SIZE := 131072
-
-BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1p1
-BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk0p28
-BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
-BOARD_USES_MMCUTILS := true
-BOARD_HAS_NO_MISC_PARTITION := true
-BOARD_HAS_NO_SELECT_BUTTON := true
-BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
-
-# FIXME: Overlay has an issue on Quincy when playing video in landscape mode
-COMMON_GLOBAL_CFLAGS += -DQCOM_ROTATOR_KERNEL_FORMATS
-
-# Workaround for glitches while cropping bypass layers
-TARGET_NO_BYPASS_CROPPING := true
-
-# MTP
-BOARD_MTP_DEVICE := "/dev/usb_mtp_gadget"
-
-# Audio
-TARGET_USES_QCOM_LPA := true
-COMMON_GLOBAL_CFLAGS += -DWITH_QCOM_LPA
-
-# Disable MVS audio, it causes robot voice in GTalk
-COMMON_GLOBAL_CFLAGS += -DNO_QCOM_MVS
-
-# Disable initlogo, Samsungs framebuffer is weird
-TARGET_NO_INITLOGO := true
 

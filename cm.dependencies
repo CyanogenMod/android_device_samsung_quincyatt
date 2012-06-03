@@ -2,6 +2,10 @@
   {
     "repository": "android_device_samsung_msm8660-common",
     "target_path": "device/samsung/msm8660-common"
+  },
+  {
+    "repository": "android_device_samsung_quincy-common",
+    "target_path": "device/samsung/quincy-common"
   }
 ]
 
