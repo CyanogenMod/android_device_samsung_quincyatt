@@ -3,10 +3,10 @@ on early-init
     # for backwards compatibility
     symlink /mnt/sdcard /sdcard
 
-    mkdir /mnt/emmc 0000 system system
-    symlink /mnt/emmc /emmc
+    mkdir /mnt/external_sd 0000 system system
+    symlink /mnt/external_sd /external_sd
 
-    export EXTERNAL_STORAGE /mnt/emmc
+    export EXTERNAL_STORAGE /mnt/sdcard
 
 # Vibetonz
     export VIBE_PIPE_PATH /dev/pipes
