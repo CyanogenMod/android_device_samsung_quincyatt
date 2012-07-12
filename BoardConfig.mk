@@ -32,7 +32,8 @@ TARGET_BOOTLOADER_BOARD_NAME := SGH-I717
 TARGET_OTA_ASSERT_DEVICE := SGH-I717,quincyatt
 
 # Kernel
-TARGET_PREBUILT_KERNEL      := device/samsung/quincyatt/prebuilt/kernel
+TARGET_KERNEL_SOURCE        := kernel/samsung/msm8660-q1
+TARGET_KERNEL_CONFIG        := cyanogen_quincyatt_defconfig
 BOARD_KERNEL_CMDLINE        := androidboot.hardware=qcom usb_id_pin_rework=true
 BOARD_KERNEL_BASE           := 0x48000000
 BOARD_FORCE_RAMDISK_ADDRESS := 0x49400000
