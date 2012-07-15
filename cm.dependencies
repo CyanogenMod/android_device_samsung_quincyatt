@@ -8,8 +8,8 @@
     "target_path": "device/samsung/quincy-common"
   },
   {
-    "repository": "android_kernel_samsung_msm8660-q1",
-    "target_path": "kernel/samsung/msm8660-q1"
+    "repository": "android_kernel_samsung_msm8660-common",
+    "target_path": "kernel/samsung/msm8660-common"
   }
 ]
 
