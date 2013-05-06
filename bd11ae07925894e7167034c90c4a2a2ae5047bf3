@@ -1,0 +1,9 @@
+Change-Id: Ibd11ae07925894e7167034c90c4a2a2ae5047bf3
+Code-Review+2: Steve Kondik <shade@chemlab.org>
+Verified+1: Steve Kondik <shade@chemlab.org>
+Code-Review+1: Chris White <chriswhite41g@gmail.com>
+Submitted-by: Steve Kondik <shade@chemlab.org>
+Submitted-at: Sun, 05 May 2013 21:33:15 -0700
+Reviewed-on: http://review.cyanogenmod.org/36792
+Project: CyanogenMod/android_device_samsung_quincyatt
+Branch: refs/heads/cm-10.1
