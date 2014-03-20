@@ -22,7 +22,11 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/quincyatt/overlay
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-    device/samsung/quincyatt/ramdisk/init.qcom.usb.rc:root/init.qcom.usb.rc \
+    device/samsung/quincyatt/ramdisk/init.qcom.usb.rc:root/init.qcom.usb.rc
+
+# BT firmware
+PRODUCT_COPY_FILES += \
+    device/samsung/quincyatt/firmware/bcm4330B1.hcd:system/etc/firmware/bcm4330B1.hcd
 
 # Inherit from quincy-common
 $(call inherit-product, device/samsung/quincy-common/quincy-common.mk)

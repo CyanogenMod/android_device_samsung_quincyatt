@@ -27,6 +27,11 @@ PRODUCT_PACKAGES := \
 
 BOARD_HAVE_NFC := true
 
+# Ramdisk
+PRODUCT_COPY_FILES += \
+    device/samsung/quincyatt/ramdisk/fstab.qcom:root/fstab.qcom \
+    device/samsung/quincyatt/ramdisk/initlogo.rle:root/initlogo.rle
+
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from quincyatt device
