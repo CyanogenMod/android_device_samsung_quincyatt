@@ -1,1 +1,1 @@
-require version-baseband=I717:I717UCMD3
+require version-baseband=I717:UCMD3
