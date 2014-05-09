@@ -47,4 +47,8 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/quincyatt/bluetooth
 
+# secondary sdcard
+BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk0p28
 
+# vold
+BOARD_VOLD_MAX_PARTITIONS := 28
