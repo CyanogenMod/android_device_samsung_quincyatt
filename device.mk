@@ -20,6 +20,11 @@ $(call inherit-product-if-exists, vendor/samsung/quincyatt/quincyatt-vendor.mk)
 ## overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/quincyatt/overlay
 
+PRODUCT_PACKAGES += \
+    mkfs.f2fs \
+    fsck.f2fs \
+    fibmap.f2fs
+
 # Ramdisk
 PRODUCT_COPY_FILES += \
     device/samsung/quincyatt/ramdisk/init.qcom.usb.rc:root/init.qcom.usb.rc
